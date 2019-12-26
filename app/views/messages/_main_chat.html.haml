@@ -1,0 +1,35 @@
+.chat-main
+  .chat-main__group-info
+    .chat-main__group-info__left
+      .chat-main__group-info__left__group-name
+        test
+      .chat-main__group-info__left__member
+        Member : masa
+    = link_to "#", class:"chat-main__group-info__btn" do
+      Edit
+  .chat-main__message-lists
+    .chat-main__message-lists__list
+      .chat-main__message-lists__list__upper-info
+        %a.chat-main__message-lists__list__upper-info__talker
+          masa
+        %a.chat-main__message-lists__list__upper-info__date
+          2019/12/24(Tue) 18:38:10
+      .chat-main__message-lists__list__text
+        おはよう
+    .chat-main__message-lists__list
+      .chat-main__message-lists__list__upper-info
+        %a.chat-main__message-lists__list__upper-info__talker
+          masa
+        %a.chat-main__message-lists__list__upper-info__date
+          2019/12/24(Tue) 18:38:10
+      .chat-main__message-lists__list__text
+        おはよう
+  .chat-main__message-form
+    .chat-main__message-form__new-message
+      .chat-main__message-form__new-message__input-box
+        .chat-main__message-form__new-message__input-box__text
+          type a message
+        %label{class: "chat-main__message-form__new-message__input-box__image"}
+          = icon('fas', 'image')
+          %input{class: "chat-main__message-form__new-message__input-box__image__file" ,type: "file"}
+      %input.chat-main__message-form__new-message__submit-btn{type: "submit", value: "Send"}/
