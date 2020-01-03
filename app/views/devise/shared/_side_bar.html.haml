@@ -1,0 +1,37 @@
+.side-bar
+  .side-bar__user-name
+    .side-bar__user-name__box
+      .side-bar__user-name__box__name
+        = current_user.name
+      %ul.side-bar__user-name__box__icons
+        %li
+          = link_to new_group_path, class: "side-bar__user-name__box__icons__icon" do
+            = icon('fas', 'edit')
+        %li
+          = link_to edit_user_path(current_user), class:"side-bar__user-name__box__icons__icon" do
+            = icon('fas', 'cog')
+  .side-bar__group-lists
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
+    -# .side-bar__group-lists__list
+    -#   .side-bar__group-lists__list__name
+    -#     techcamp1
+    -#   .side-bar__group-lists__list__new-message
+    -#     まだメッセージがありません
+
+    -# .side-bar__group-lists__list
+    -#   .side-bar__group-lists__list__name
+    -#     techcamp2
+    -#   .side-bar__group-lists__list__new-message
+    -#     まだメッセージがありません
+    
+    -# .side-bar__group-lists__list
+    -#   .side-bar__group-lists__list__name
+    -#     techcamp3
+    -#   .side-bar__group-lists__list__new-message
+    -#     まだメッセージがありません
